@@ -1,0 +1,94 @@
+/* base */
+$font-family-base: "Poppins", sans-serif;
+/* 載入字體 */
+$link-decoration: none;
+/* 去掉連結底線 */
+$paragraph-margin-bottom: 0;
+$headings-margin-bottom: 0;
+/* 去掉文字下方留白 */
+
+/* custom_variables */
+$section-padding: 120px;
+$section-padding-sm: 80px;
+
+/* custom */
+$primary-120: #003bb7;
+$primary-100: #0068ff;
+$primary-80: #3f95ff;
+$primary-60: #66b1ff;
+$primary-40: #99cfff;
+$primary-10: #e5f4ff;
+
+$success-120: #48970f;
+$success-100: #7cd31f;
+$success-20: #ddfaa5;
+$success-10: #f0fcd1;
+
+$info-120: #1566b5;
+$info-100: #2aaffc;
+$info-20: #a9effe;
+$info-10: #d4f9fe;
+
+$danger-120: #b71d4f;
+$danger-100: #ff3a55;
+$danger-20: #ffbbb0;
+$danger-10: #ffe0d7;
+
+$neutral-80: #4b4b4b;
+$neutral-60: #909090;
+$neutral-40: #ececec;
+$neutral-10: #f9f9f9;
+
+$custom-colors: (
+  "primary": $primary-100,
+  "primary-120": $primary-120,
+  "primary-100": $primary-100,
+  "primary-80": $primary-80,
+  "primary-60": $primary-60,
+  "primary-40": $primary-40,
+  "primary-10": $primary-10,
+
+  "success": $success-100,
+  "success-120": $success-120,
+  "success-100": $success-100,
+  "success-20": $success-20,
+  "success-10": $success-10,
+
+  "info": $info-100,
+  "info-120": $info-120,
+  "info-100": $info-100,
+  "info-20": $info-20,
+  "info-10": $info-10,
+
+  "danger": $danger-100,
+  "danger-120": $danger-120,
+  "danger-100": $danger-100,
+  "danger-20": $danger-20,
+  "danger-10": $danger-10,
+
+  "neutral-80": $neutral-80,
+  "neutral-60": $neutral-60,
+  "neutral-40": $neutral-40,
+  "neutral-10": $neutral-10,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$btn-font-weight: $font-weight-semibold; // 600
+$btn-border-radius: $border-radius-larger; //12px
+/* button */
+
+$input-bg: $neutral-40;
+$input-color: $neutral-60;
+$input-border-radius: $border-radius-larger; //20px
+/* input */
+
+$navbar-padding-y: null;
+$navbar-padding-x: null;
+/* navbar */
+
+$card-border-radius: $border-radius-larger; //20px
+/* card */
+
+$table-striped-bg: $neutral-10;
+/* table */

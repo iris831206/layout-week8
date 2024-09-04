@@ -1,0 +1,208 @@
+.courses {
+  padding-top: $section-padding-sm;
+  padding-bottom: $section-padding-sm;
+  @include media-breakpoint-up(lg) {
+    margin-top: $section-padding;
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+  }
+  .course-title {
+    margin-top: 0px;
+    @include media-breakpoint-up(lg) {
+      margin-top: 160px;
+    }
+  }
+  position: relative;
+  .d-lg-flex {
+    gap: 12px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: 0px;
+    width: 560px;
+    height: 560px;
+    background-image: url("../images/deco/flower-2.png");
+    background-repeat: no-repeat;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .card {
+    max-width: 416px;
+  }
+  .card-img-top {
+    border-top-left-radius: $border-radius-larger;
+    border-top-right-radius: $border-radius-larger;
+  }
+  .courseBtnSwiper {
+    .swiper-slide {
+      padding: 20px 0;
+      width: auto !important;
+    //   &:first-child {
+    //     width: auto !important; /* 設定第一個slide的寬度 */
+    // }
+  }}
+  .courseSwiper {
+    .swiper-slide {
+      padding-bottom: 20px;
+    }
+  }
+}
+.bought {
+  padding-top: $section-padding-sm;
+  padding-bottom: $section-padding-sm;
+  @include media-breakpoint-up(lg) {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+  }
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(240, 246, 255, 0),
+      rgba(240, 246, 255, 1)
+    );
+    z-index: -1;
+  }
+  .card {
+    max-width: 416px;
+  }
+  .card-img-top {
+    border-top-left-radius: $border-radius-larger;
+    border-top-right-radius: $border-radius-larger;
+  }
+  .badge {
+    padding: 8px 12px;
+  }
+  .swiper-slide {
+    padding: 20px 0;
+  }
+}
+.learning {
+  padding-top: calc($section-padding-sm / 2);
+  padding-bottom: calc($section-padding-sm / 2);
+  padding-left: 12px;
+  padding-right: 12px;
+  @include media-breakpoint-up(lg) {
+    padding-top: $section-padding;
+    padding-bottom: $section-padding;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .bg-primary {
+    border-radius: 80px;
+    padding: 80px 0px;
+    overflow: hidden;
+  }
+  .polygon {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: -90px;
+      width: 80px;
+      height: 80px;
+      background-image: url("../images/deco/polygon-1.png");
+      background-repeat: no-repeat;
+    }
+  }
+  .line {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      right: -200px;
+      bottom: -100px;
+      width: 438px;
+      height: 100px;
+      background-image: url("../images/deco/line-2.png");
+      background-repeat: no-repeat;
+    }
+  }
+  .card {
+    padding: 20px;
+    height: 100%;
+    width: 80%;
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+    }
+  }
+  .badge {
+    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+  }
+}
+.teacher {
+  overflow: hidden;
+  padding-top: $section-padding-sm;
+  padding-bottom: $section-padding;
+  @include media-breakpoint-up(lg) {
+    padding-top: $section-padding;
+    padding-bottom: 200px;
+  }
+  .line {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -1200px;
+      top: 30px;
+      width: 2048px;
+      height: 500px;
+      background-image: url("../images/deco/line-1.png");
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  .card {
+    max-width: 416px;
+  }
+  .card-img-top {
+    margin-left: 80px;
+    width: auto;
+  }
+  .card-body {
+    background: white;
+    margin-right: 32px;
+    margin-top: -70px;
+    border-radius: 12px;
+  }
+  .badge {
+    padding: 8px 12px;
+  }
+  .swiper-slide {
+    padding: 20px 0;
+  }
+}
+.avatar {
+  width: 44px;
+  height: 44px;
+}
+.title-flower {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    transform: translate(50%);
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/deco/flower-1.png");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}
+
+.swiper-slide {
+  height: auto;
+}

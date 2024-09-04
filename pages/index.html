@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>index</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
+    <%- include('./layout/banner'); -%>
+      <section class="courses">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 d-flex flex-column course-title">
+              <h2 class="fs-1 fw-bold mb-2">火熱募資課程</h2>
+              <p class="mb-lg-5">現在購買最優惠✨</p>
+              <div class="d-none d-lg-flex flex-wrap">
+                <button type="button" class="btn btn-primary">全部</button>
+                <button type="button" class="btn shadow-sm bg-white">
+                  🍽️ 烹飪料理
+                </button>
+                <button type="button" class="btn shadow-sm bg-white">
+                  📊 數據分析
+                </button>
+                <button type="button" class="btn shadow-sm bg-white">
+                  🎼 音樂製作
+                </button>
+                <button type="button" class="btn shadow-sm bg-white">
+                  📝 創意寫作
+                </button>
+                <button type="button" class="btn shadow-sm bg-white">
+                  💬 語言學習
+                </button>
+                <button type="button" class="btn shadow-sm bg-white">
+                  🖌️ 藝術創作
+                </button>
+              </div>
+              <div class="d-block d-lg-none">
+                <%- include('./components/courseBtnSwiper'); -%>
+              </div>
+              <button type="button" class="btn btn-primary custom-button mt-lg-5 d-none d-lg-block">
+                更多募資課程
+              </button>
+            </div>
+            <div class="col-lg-8">
+              <%- include('./components/courseSwiper'); -%>
+                <div class="swiper-pagination-course mx-auto mt-3" style="transform: translateX(0%);"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bought position-relative">
+        <div class="container">
+          <div class="d-flex flex-column">
+            <h2 class="fs-1 fw-bold mb-2 mx-lg-auto">
+              <span class="title-flower">看</span>看大家都<br class="d-block d-lg-none">買了什麼
+            </h2>
+            <p class="mx-lg-auto mb-lg-5">熱銷課程一次看！✨</p>
+          </div>
+          <button type="button"
+            class="btn swiper-btn position-absolute top-50 start-0 translate-middle-y shadow p-3 mt-5 ms-5 d-none d-lg-block swiper-button-next-bought"
+            style="z-index: 1">
+            <span class="material-symbols-outlined"> arrow_back </span>
+          </button>
+          <button type="button"
+            class="btn swiper-btn position-absolute top-50 end-0 translate-middle-y shadow p-3 mt-5 me-5 d-none d-lg-block swiper-button-prev-bought"
+            style="z-index: 1">
+            <span class="material-symbols-outlined"> arrow_forward </span>
+          </button>
+          <%- include('./components/boughtSwiper'); -%>
+            <div class="swiper-pagination-bought mx-auto mt-3" style="transform: translateX(0%);"></div>
+
+        </div>
+      </section>
+      <section class="learning">
+        <div class="bg-primary">
+          <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+              <div class="col-lg-6">
+                <div class="d-flex justify-content-center align-items-center">
+                  <p class="text-white fw-bold fs-1">
+                    <span class="polygon">想</span>學什麼嗎？<br />
+                    一探究竟<span class="line">。</span>
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-lg-0" style="margin-top: 120px;">
+                <%- include('./components/learningSwiper'); -%>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="teacher">
+        <div class="container">
+          <div class="d-flex flex-column">
+            <h2 class="fs-1 fw-bold mb-2 mx-lg-auto">
+              <span class="title-flower">頂</span>尖講師<br class="d-block d-lg-none">帶你<span class="line">飛</span>
+            </h2>
+            <p class="mx-lg-auto mb-lg-5">
+              超真實學員評價，這些講師你絕對不能錯過！
+            </p>
+          </div>
+
+          <%- include('./components/teacherSwiper'); -%>
+            <div class="swiper-pagination-teacher mx-auto mt-3" style="transform: translateX(0%);"></div>
+      </section>
+
+      <%- include('./layout/footer'); -%>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".bannerSwiper", {
+            slidesPerView: 1.1,
+            spaceBetween: 20,
+            centeredSlides: true,
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next-banner",
+              prevEl: ".swiper-button-prev-banner",
+            },
+          });
+        </script>
+        <script>
+          var swiper = new Swiper(".courseBtnSwiper", {
+            spaceBetween: 12,
+          });
+        </script>
+        <script>
+          var swiper = new Swiper(".courseSwiper", {
+            slidesPerView: 1.3,
+            grid: {
+              rows: 1,
+              fill: 'row',
+            },
+            loop: true,
+            spaceBetween: 20,
+            pagination: {
+              el: ".swiper-pagination-course",
+              dynamicBullets: true,
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2.3,
+                spaceBetween: 20
+              },
+              996: {
+                slidesPerView: 2,
+                grid: {
+                  rows: 2,
+                  fill: 'row',
+                },
+              },
+
+            }
+          });
+        </script>
+        <script>
+          var swiper = new Swiper(".boughtSwiper", {
+            slidesPerView: 1.3,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+              nextEl: ".swiper-button-next-bought",
+              prevEl: ".swiper-button-prev-bought",
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2.3,
+                spaceBetween: 20
+              },
+              996: {
+                slidesPerView: 4,
+                spaceBetween: 20
+              },
+
+            }
+          });
+        </script>
+        <script>
+          var swiper = new Swiper(".learningSwiper", {
+            slidesPerView: 1,
+            grid: {
+              rows: 2,
+              fill: 'row',
+            },
+            spaceBetween: 20,
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+                grid: {
+                  rows: 2,
+                  fill: 'row',
+                },
+              },
+              996: {
+                slidesPerView: 2,
+                grid: {
+                  rows: 4,
+                  fill: 'row',
+                },
+              },
+
+            }
+          });
+        </script>
+        <script>
+          var swiper = new Swiper(".teacherSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+              el: ".swiper-pagination-teacher",
+              dynamicBullets: true,
+            },
+            breakpoints: {
+              // when window width is >= 996px
+              996: {
+                slidesPerView: 3,
+                spaceBetween: 20
+              },
+            }
+
+          });
+        </script>
+        <script type="module" src="../main.js"></script>
+</body>
+
+</html>

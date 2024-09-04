@@ -1,0 +1,133 @@
+.header {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 0px;
+  @include media-breakpoint-up(lg) {
+    border-radius: $border-radius-pill;
+    padding-top: 56px;
+    padding-bottom: 32px;
+    &.shadow-info {
+      box-shadow: 0 4px 10px 0 rgba(0, 104, 255, 0.1); /* 淺藍色陰影 */
+      /*box-shadow:[水平偏移] [垂直偏移] [模糊半徑] [擴散半徑] [顏色];*/
+    }
+  }
+  .navbar-brand {
+    width: 125px;
+    @include media-breakpoint-up(xl) {
+      width: 200px;
+    }
+  }
+  input {
+    padding: 20px 0px;
+    background-color: transparent;
+    @include media-breakpoint-up(xl) {
+      padding: 20px 40px;
+      width: 425px;
+    }
+  }
+
+  .top-20 {
+    top: 20%;
+  }
+  .dropdown-item {
+    padding: 12px;
+    padding-left: 24px;
+    border-radius: 12px;
+    &:not(.dropdown-item-all) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &::after {
+        content: "\e5cc";
+        font-family: "Material Symbols Outlined";
+      }
+      &.active,
+      &:hover {
+        background: $primary;
+        color: $white;
+        font-weight: bold;
+        &::after {
+          color: $white;
+        }
+      }
+    }
+  }
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    &::after {
+      color: $neutral-60;
+      content: "\e313";
+      font-family: "Material Symbols Outlined";
+      border: none;
+    }
+  }
+
+  .desktop-nav-dropdown-menu {
+    width: 100%;
+    max-width: 863px;
+    &[data-bs-popper] {
+      left: 15%;
+    }
+    .dropdown-menu {
+      &-level-one,
+      &-level-two,
+      &-level-three {
+        max-height: 600px;
+        height: calc(100vh - 200px);
+        overflow-y: scroll;
+      }
+      &-level-one,
+      &-level-two {
+        padding: 12px 12px 4px;
+        width: 26%;
+      }
+      &-level-three {
+        padding: 12px 24px 4px;
+        width: 48%;
+      }
+    }
+  }
+
+  .mobile-nav-dropdown-menu {
+    height: calc(100vh - 92px);
+    overflow-y: scroll;
+    .dropdown-menu-level-two {
+      padding: 16px 24px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  .notice-dropdown-menu {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 320px;
+    min-width: 320px;
+    position: absolute;
+    &[data-bs-popper] {
+      left: -120px;
+    }
+    @include media-breakpoint-up(lg) {
+      &[data-bs-popper] {
+        left: -120px;
+        margin-top: 30px;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      &[data-bs-popper] {
+        left: -120px;
+        margin-top: 40px;
+      }
+    }
+    .icon{
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+

@@ -1,0 +1,68 @@
+.banner {
+  @include media-breakpoint-up(lg) {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .flower {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -270px;
+      top: -300px;
+      width: 720px;
+      height: 720px;
+      background-image: url("../images/deco/flower-4.png");
+      background-repeat: no-repeat;
+      opacity: 0.8;
+    }
+  }
+  .banner-image-phone{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 64px);
+  }
+  .banner-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 80px;
+    position: relative;
+    overflow: hidden; // 隱藏超出的部分
+  }
+  .banner-content {
+    position: absolute;
+    bottom: 144px;
+    left: 40px;
+  }
+  .banner-action {
+    bottom: -160px;
+    left: 300px;
+    padding-top: 32px;
+    padding-bottom: 102px;
+    padding-left: 300px;
+    padding-right: 80px;
+    border-radius: 100px;
+  }
+  .badge-sm {
+    padding: 8px 12px;
+  }
+  .badge-lg {
+    padding: 16px;
+  }
+  .swiper-slide {
+    position: relative;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .swiper-slide:not(.swiper-slide-active)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); // 半透明白色遮罩
+    z-index: 1;
+    pointer-events: none;
+  }
+}

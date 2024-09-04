@@ -1,0 +1,11 @@
+.swiper-btn {
+    background-color: $white;
+    color: $primary;
+    &:hover,
+    &:active,
+    &.active,
+    &.focus {
+        background-color: $primary !important;
+        color: $white !important;
+    }
+}

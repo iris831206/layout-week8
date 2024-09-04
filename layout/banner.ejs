@@ -1,0 +1,46 @@
+<!-- PC -->
+<section class="banner position-relative d-none d-lg-block">
+  <button type="button"
+    class="btn swiper-btn position-absolute top-50 start-0 translate-middle-y shadow p-3 swiper-button-prev-banner"
+    style="z-index: 1; margin-left: 80px;">
+    <span class="material-symbols-outlined"> arrow_back </span>
+  </button>
+  <button type="button"
+    class="btn swiper-btn position-absolute top-50 end-0 translate-middle-y shadow p-3 swiper-button-next-banner"
+    style="z-index: 1; margin-right: 80px;">
+    <span class="material-symbols-outlined"> arrow_forward </span>
+  </button>
+  <%- include('./components/bannerSwiper'); -%>
+</section>
+
+<!-- MOBILE -->
+<section class="banner d-block d-lg-none">
+  <div class="banner-image-phone position-relative" style="background-image: url(../assets/images/hero-2.png);">
+    <a href="#">
+      <div class="banner-content start-50 translate-middle" style="bottom: 97px;">
+        <div class="badge badge-lg bg-white text-dark rounded-pill banner-text fw-semibold">
+          <div class="badge badge-sm bg-primary-10 text-primary rounded-pill me-2">
+            熱銷課程 🔥
+          </div>
+          給成人的鋼琴入門課，一小時教你彈奏上手！
+        </div>
+      </div>
+    </a>
+    <a href="#">
+      <div class="bg-primary text-white fw-semibold p-3 position-absolute start-0 bottom-0 w-100">
+        <small class="d-flex justify-content-center align-items-center">
+          探索感興趣的課程，今天立即上課<span class="ms-2 material-symbols-outlined">arrow_forward</span>
+        </small>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- <div
+class="bg-primary text-white fw-semibold position-absolute bottom-0 w-100" style="padding: 16px 0;">
+<small class="d-flex ">
+    探索感興趣的課程，今天立即上課<span
+        class="ms-2 material-symbols-outlined align-baseline">arrow_forward</span>
+</small>
+</div> -->
+<!-- <img src="../assets/images/hero-2.png" class="object-fit-cover" style="height: calc(100vh - 64px);"> -->

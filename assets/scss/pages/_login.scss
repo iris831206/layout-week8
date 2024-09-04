@@ -1,0 +1,7 @@
+.login {
+    padding: 80px 0;
+    @include media-breakpoint-up(lg) {
+        padding: 40px 0;
+      }
+
+}
